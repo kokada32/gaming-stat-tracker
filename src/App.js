@@ -1,9 +1,10 @@
 import './App.css';
+import MatchList from './pages/matchList';
 
 function App() {
   return (
     <div>
-      <h1>Warzone Stat Tracker</h1>
+      <MatchList />
     </div>
   );
 }
