@@ -1,0 +1,92 @@
+[
+    {
+        "matchId": 1,
+        "gameType": "Quads",
+        "kills": 5,
+        "deaths": 2,
+        "damage": 3493,
+        "date": "01/12/21 12:43",
+        "placement": "2nd"
+    },
+    {
+        "matchId": 2,
+        "gameType": "Solos",
+        "kills": 6,
+        "deaths": 2,
+        "damage": 4385,
+        "date": "02/22/21 4:45",
+        "placement": "6th"
+    },
+    {
+        "matchId": 3,
+        "gameType": "Quads",
+        "kills": 10,
+        "deaths": 5,
+        "damage": 5445,
+        "date": "03/3/21 8:11",
+        "placement": "3rd"
+    },
+    {
+        "matchId": 4,
+        "gameType": "Duos",
+        "kills": 3,
+        "deaths": 4,
+        "damage": 1555,
+        "date": "04/30/21 1:01",
+        "placement": "16th"
+    },
+    {
+        "matchId": 5,
+        "gameType": "Duos",
+        "kills": 9,
+        "deaths": 5,
+        "damage": 2457,
+        "date": "03/31/21 5:55",
+        "placement": "4th"
+    },
+    {
+        "matchId": 6,
+        "gameType": "Trios",
+        "kills": 7,
+        "deaths": 3,
+        "damage": 4003,
+        "date": "09/25/21 9:33",
+        "placement": "1st"
+    },
+    {
+        "matchId": 7,
+        "gameType": "Trios",
+        "kills": 7,
+        "deaths": 5,
+        "damage": 3562,
+        "date": "06/13/21 1:17",
+        "placement": "8th"
+    },
+    {
+        "matchId": 8,
+        "gameType": "Solos",
+        "kills": 15,
+        "deaths": 1,
+        "damage": 6784,
+        "date": "04/3/21 11:56",
+        "placement": "1st"
+    },
+    {
+        "matchId": 9,
+        "gameType": "Quads",
+        "kills": 2,
+        "deaths": 5,
+        "damage": 893,
+        "date": "08/11/21 3:23",
+        "placement": "23rd"
+    },
+    {
+        "matchId": 10,
+        "gameType": "Quads",
+        "kills": 7,
+        "deaths": 3,
+        "damage": 4321,
+        "date": "11/31/21 03:45",
+        "placement": "15th"
+    }
+]
