@@ -29,11 +29,41 @@ class matchList extends Component {
     }
 
     sortByMostKills = () => {
-        console.log("most kills");
+        this.setState( prevState => {
+            const list = prevState.matches;
+            const sortByKills = list => {
+                const sorter = function (a,b) {
+                   if (b.kills > a.kills) {
+                      return 1
+                   } else if (b.kills < a.kills) {    
+                      return -1;    
+                   }    
+                      return 0;    
+                }
+                list.sort(sorter);
+                return list
+             }
+             sortByKills(list);
+        });
     }
 
     sortByMostDamage = () => {
-        console.log("most damage");
+        this.setState( prevState => {
+            const list = prevState.matches;
+            const sortByDamage = list => {
+                const sorter = function (a,b) {
+                   if (b.damage > a.damage) {
+                      return 1
+                   } else if (b.damage < a.damage) {    
+                      return -1;    
+                   }    
+                      return 0;    
+                }
+                list.sort(sorter);
+                return list
+             }
+             sortByDamage(list);
+        });
     }
 
     // FilterValues (matchesArr) {
