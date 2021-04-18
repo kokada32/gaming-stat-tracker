@@ -86,9 +86,11 @@ class matchList extends Component {
         return (
             <div>
                 <section className="jumbotron">
-                    <Link className="dropdown-item" to={""} onClick={this.sortByMostRecent}>Most Recent</Link>
-                    <Link className="dropdown-item" to={""} onClick={this.sortByMostKills}>Most Kills</Link>
-                    <Link className="dropdown-item" to={""} onClick={this.sortByMostDamage}>Most Damage</Link>
+                    <div className="btn-group" role="group">
+                        <Link type="button" className="btn btn-outline-primary" to={""} onClick={this.sortByMostRecent}>Most Recent</Link>
+                        <Link type="button" className="btn btn-outline-primary" to={""} onClick={this.sortByMostKills}>Most Kills</Link>
+                        <Link type="button" className="btn btn-outline-primary" to={""} onClick={this.sortByMostDamage}>Most Damage</Link>
+                    </div>
                 </section>
                 <div className="container">
                     <div className="row row-cols-2">
