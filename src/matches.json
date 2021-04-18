@@ -5,7 +5,7 @@
         "kills": 5,
         "deaths": 2,
         "damage": 3493,
-        "date": "01/12/21 12:43",
+        "date": 1610484235,
         "placement": "2nd"
     },
     {
@@ -14,7 +14,7 @@
         "kills": 6,
         "deaths": 2,
         "damage": 4385,
-        "date": "02/22/21 4:45",
+        "date": 1614041106,
         "placement": "6th"
     },
     {
@@ -23,7 +23,7 @@
         "kills": 10,
         "deaths": 5,
         "damage": 5445,
-        "date": "03/3/21 8:11",
+        "date": 1614831083,
         "placement": "3rd"
     },
     {
@@ -32,7 +32,7 @@
         "kills": 3,
         "deaths": 4,
         "damage": 1555,
-        "date": "04/30/21 1:01",
+        "date": 1619812894,
         "placement": "16th"
     },
     {
@@ -41,7 +41,7 @@
         "kills": 9,
         "deaths": 5,
         "damage": 2457,
-        "date": "03/31/21 5:55",
+        "date": 1617238555,
         "placement": "4th"
     },
     {
@@ -50,7 +50,7 @@
         "kills": 7,
         "deaths": 3,
         "damage": 4003,
-        "date": "09/25/21 9:33",
+        "date": 1632630814,
         "placement": "1st"
     },
     {
@@ -59,7 +59,7 @@
         "kills": 7,
         "deaths": 5,
         "damage": 3562,
-        "date": "06/13/21 1:17",
+        "date": 1623615432,
         "placement": "8th"
     },
     {
@@ -68,7 +68,7 @@
         "kills": 15,
         "deaths": 1,
         "damage": 6784,
-        "date": "04/3/21 11:56",
+        "date": 1617476183,
         "placement": "1st"
     },
     {
@@ -77,7 +77,7 @@
         "kills": 2,
         "deaths": 5,
         "damage": 893,
-        "date": "08/11/21 3:23",
+        "date": 1628720624,
         "placement": "23rd"
     },
     {
@@ -86,7 +86,7 @@
         "kills": 7,
         "deaths": 3,
         "damage": 4321,
-        "date": "11/31/21 03:45",
+        "date": 1638315933,
         "placement": "15th"
     }
 ]

@@ -9,7 +9,9 @@ class matchList extends Component {
     }
 
     sortByMostRecent = () => {
-        console.log("most recent");
+        // this.setState( prevState => {
+        //     prevState.
+        // })
     }
 
     sortByMostKills = () => {
