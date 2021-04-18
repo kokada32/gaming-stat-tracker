@@ -10,7 +10,21 @@ class matchList extends Component {
 
     sortByMostRecent = () => {
         // this.setState( prevState => {
-        //     prevState.
+        //     const list = prevState.matches;
+        //     const sortByDate = list => {
+        //         const sorter = (a, b) => {
+        //             if(a.date > b.date) {
+        //                 return 1;
+        //             } else if (a.date < b.date) {
+        //                 return -1
+        //             } return 0
+        //         };
+        //         list.sort(sorter);
+        //         return list;
+        //     }
+        //     sortByDate(list);
+        //     console.log("sorted:", sortByDate(list))
+        //     this.FilterValues(list);
         // })
     }
 
@@ -21,6 +35,21 @@ class matchList extends Component {
     sortByMostDamage = () => {
         console.log("most damage");
     }
+
+    // FilterValues (matchesArr) {
+    //     for( var i = 0; i < matchesArr.length; i++) {
+    //         let obj = matchesArr[i];
+    //         console.log(obj)
+    //     //    //---- Filter Date ----
+    //         let date = new Date(obj.date * 1000).toString();
+    //         let split = date.split(' ').slice(1, 4).join(' ');
+    //         let time = new Date(date).toLocaleTimeString();
+    //         let dateAndTime = split + " at " + time;
+    //         console.log("dateandtime:", dateAndTime.toString());
+    //         obj.date = date
+    //         console.log(obj)
+    //     }
+    //  }
 
     render() {
         const allMatchesRows = matches.map( m => <MatchRow key={m.matchId} {...m} />);
