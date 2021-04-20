@@ -7,7 +7,7 @@ function App() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-            <Link className="navbar-brand" to={""}>Home</Link>
+            <Link className="navbar-brand" to={""}>Warzone Game Tracker</Link>
         </div>
       </nav>
       <main>

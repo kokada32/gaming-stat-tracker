@@ -5,7 +5,8 @@ import matches from '../matches.json';
 
 class matchList extends Component {
     state = {
-        matches
+        matches,
+        filter: [],
     }
 
     sortByMostRecent = () => {
@@ -66,7 +67,7 @@ class matchList extends Component {
         });
     }
 
-    // FilterValues (matchesArr) {
+    // FilterValues = (matchesArr) => {
     //     for( var i = 0; i < matchesArr.length; i++) {
     //         let obj = matchesArr[i];
     //         console.log(obj)
@@ -81,8 +82,33 @@ class matchList extends Component {
     //     }
     //  }
 
+    // FilterBySolos = () => {
+    //     this.setState( () => {
+    //         const solos = matches.filter( s => s.gameType.includes("Solos"));
+    //         console.log(solos)
+    //         return solos
+    //     })
+    // } 
+
+    setFilter = type => {
+        console.log(type)
+        //filter by string of solos, duos, trios, quads
+            const filter = matches.filter( s => s.gameType.includes(type));
+            console.log(filter)
+            return {filter}
+    }
+
+    // anoynmous functions inside onClick to send value thru to setFilter function
+    // change allMatchesRows to if/else statement to display current filter
+    
     render() {
-        const allMatchesRows = matches.map( m => <MatchRow key={m.matchId} {...m} />);
+        let allMatchesRows;
+        let filter;
+        if ( filter ) {
+            allMatchesRows = filter.map( f => <MatchRow key={f.matchId} {...f} />);
+        } else {
+            allMatchesRows = matches.map( m => <MatchRow key={m.matchId} {...m} />);
+        }
         return (
             <div>
                 <section className="jumbotron">
@@ -91,10 +117,16 @@ class matchList extends Component {
                         <Link type="button" className="btn btn-outline-primary" to={""} onClick={this.sortByMostKills}>Most Kills</Link>
                         <Link type="button" className="btn btn-outline-primary" to={""} onClick={this.sortByMostDamage}>Most Damage</Link>
                     </div>
+                    <div className="btn-group" role="group"> 
+                        <Link type="button" className="btn btn-outline-secondary" to={""} onClick={(e) => {this.setFilter(e.target.innerText)}}>Solos</Link>
+                        <Link type="button" className="btn btn-outline-secondary" to={""} >Duos</Link>
+                        <Link type="button" className="btn btn-outline-secondary" to={""} >Trios</Link>
+                        <Link type="button" className="btn btn-outline-secondary" to={""} >Quads</Link>
+                    </div>
                 </section>
                 <div className="container">
                     <div className="row row-cols-2">
-                        {allMatchesRows}
+                        { allMatchesRows }
                     </div>
                 </div>
             </div>
