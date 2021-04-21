@@ -42,9 +42,12 @@ class matchList extends Component {
                       return 0;    
                 }
                 list.sort(sorter);
-                return list
              }
              sortByKills(list);
+             return {
+                 list,
+                 filter: [],
+             }
         });
     }
 
@@ -61,9 +64,12 @@ class matchList extends Component {
                       return 0;    
                 }
                 list.sort(sorter);
-                return list
              }
              sortByDamage(list);
+             return {
+                 list,
+                 filter: [],
+             }
         });
     }
 
@@ -82,33 +88,21 @@ class matchList extends Component {
     //     }
     //  }
 
-    // FilterBySolos = () => {
-    //     this.setState( () => {
-    //         const solos = matches.filter( s => s.gameType.includes("Solos"));
-    //         console.log(solos)
-    //         return solos
-    //     })
-    // } 
-
     setFilter = type => {
-        console.log(type)
-        //filter by string of solos, duos, trios, quads
+        this.setState( () => {
             const filter = matches.filter( s => s.gameType.includes(type));
-            console.log(filter)
             return {filter}
+        });
     }
 
-    // anoynmous functions inside onClick to send value thru to setFilter function
-    // change allMatchesRows to if/else statement to display current filter
-    
     render() {
         let allMatchesRows;
-        let filter;
-        if ( filter ) {
-            allMatchesRows = filter.map( f => <MatchRow key={f.matchId} {...f} />);
+        if ( this.state.filter.length > 1 ) {
+            allMatchesRows = this.state.filter.map( f => <MatchRow key={f.matchId} {...f} />);
         } else {
             allMatchesRows = matches.map( m => <MatchRow key={m.matchId} {...m} />);
         }
+
         return (
             <div>
                 <section className="jumbotron">
@@ -119,9 +113,9 @@ class matchList extends Component {
                     </div>
                     <div className="btn-group" role="group"> 
                         <Link type="button" className="btn btn-outline-secondary" to={""} onClick={(e) => {this.setFilter(e.target.innerText)}}>Solos</Link>
-                        <Link type="button" className="btn btn-outline-secondary" to={""} >Duos</Link>
-                        <Link type="button" className="btn btn-outline-secondary" to={""} >Trios</Link>
-                        <Link type="button" className="btn btn-outline-secondary" to={""} >Quads</Link>
+                        <Link type="button" className="btn btn-outline-secondary" to={""} onClick={(e) => {this.setFilter(e.target.innerText)}}>Duos</Link>
+                        <Link type="button" className="btn btn-outline-secondary" to={""} onClick={(e) => {this.setFilter(e.target.innerText)}}>Trios</Link>
+                        <Link type="button" className="btn btn-outline-secondary" to={""} onClick={(e) => {this.setFilter(e.target.innerText)}}>Quads</Link>
                     </div>
                 </section>
                 <div className="container">
