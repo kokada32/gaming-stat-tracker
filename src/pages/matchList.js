@@ -22,20 +22,20 @@ class matchList extends Component {
             const list = prevState.matches;
             const sortByKills = list => {
                 const sorter = function (a,b) {
-                   if (b.kills > a.kills) {
+                   if (parseInt(b.kills) > parseInt(a.kills)) {
                       return 1
-                   } else if (b.kills < a.kills) {    
+                   } else if (parseInt(b.kills) < parseInt(a.kills)) {    
                       return -1;    
                    }    
                       return 0;    
                 }
                 list.sort(sorter);
-             }
-             sortByKills(list);
-             return {
-                 list,
-                 filter: [],
-             }
+            }
+            sortByKills(list);
+            return {
+                list,
+                filter: [],
+            }
         });
     }
 
@@ -44,9 +44,9 @@ class matchList extends Component {
             const list = prevState.matches;
             const sortByDamage = list => {
                 const sorter = function (a,b) {
-                   if (b.damage > a.damage) {
+                   if (parseInt(b.damage) > parseInt(a.damage)) {
                       return 1
-                   } else if (b.damage < a.damage) {    
+                   } else if (parseInt(b.damage) < parseInt(a.damage)) {    
                       return -1;    
                    }    
                       return 0;    

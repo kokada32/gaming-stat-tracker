@@ -15,9 +15,9 @@ const MatchForm = ({match, setMatch, buttonText, cancelPath}) => {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        await MatchesAPI.create(match);
+        const data = await MatchesAPI.create(match);
         if (data) 
-            setRedirect( { pathname: `/matches/${data.objectId}`});
+            setRedirect( { pathname: `/`});
     }
 
     if (redirect.pathname)
