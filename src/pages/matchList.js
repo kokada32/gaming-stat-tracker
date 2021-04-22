@@ -106,9 +106,9 @@ class matchList extends Component {
     render () {
         let allMatchesRows;
         if ( this.state.filter.length > 1 ) {
-            allMatchesRows = this.state.filter.map( f => <MatchRow key={f.matchId} {...f} />);
+            allMatchesRows = this.state.filter.map( f => <MatchRow key={f.objectId} {...f} />);
         } else {
-            allMatchesRows = this.state.matches.map( m => <MatchRow key={m.matchId} {...m} />);
+            allMatchesRows = this.state.matches.map( m => <MatchRow key={m.objectId} {...m} />);
         }
 
         return (
