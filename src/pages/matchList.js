@@ -112,18 +112,18 @@ class matchList extends Component {
         }
 
         return (
-            <div>
-                <section className="jumbotron">
+            <div id="matchList">
+                <section className="jumbotron d-flex justify-content-evenly" id="sortFilterBar">
                     <div className="btn-group" role="group">
                         {/* <Link type="button" className="btn btn-outline-primary" to={""} onClick={this.sortByMostRecent}>Most Recent</Link> */}
-                        <Link type="button" className="btn btn-outline-primary" to={""} onClick={this.sortByMostKills}>Most Kills</Link>
-                        <Link type="button" className="btn btn-outline-primary" to={""} onClick={this.sortByMostDamage}>Most Damage</Link>
+                        <Link type="button" className="btn sort-buttons" to={""} onClick={this.sortByMostKills}>Most Kills</Link>
+                        <Link type="button" className="btn sort-buttons" to={""} onClick={this.sortByMostDamage}>Most Damage</Link>
                     </div>
                     <div className="btn-group" role="group"> 
-                        <Link type="button" className="btn btn-outline-secondary" to={""} onClick={(e) => {this.setFilter(e.target.innerText)}}>Solos</Link>
-                        <Link type="button" className="btn btn-outline-secondary" to={""} onClick={(e) => {this.setFilter(e.target.innerText)}}>Duos</Link>
-                        <Link type="button" className="btn btn-outline-secondary" to={""} onClick={(e) => {this.setFilter(e.target.innerText)}}>Trios</Link>
-                        <Link type="button" className="btn btn-outline-secondary" to={""} onClick={(e) => {this.setFilter(e.target.innerText)}}>Quads</Link>
+                        <Link type="button" className="btn filter-buttons" to={""} onClick={(e) => {this.setFilter(e.target.innerText)}}>Solos</Link>
+                        <Link type="button" className="btn filter-buttons" to={""} onClick={(e) => {this.setFilter(e.target.innerText)}}>Duos</Link>
+                        <Link type="button" className="btn filter-buttons" to={""} onClick={(e) => {this.setFilter(e.target.innerText)}}>Trios</Link>
+                        <Link type="button" className="btn filter-buttons" to={""} onClick={(e) => {this.setFilter(e.target.innerText)}}>Quads</Link>
                     </div>
                 </section>
                 <div className="container">
