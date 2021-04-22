@@ -105,6 +105,9 @@ class matchList extends Component {
 
         return (
             <div>
+                <div>
+                    <Link className="btn btn-primary btn-lg" to={"/match/new"}>New Match</Link>
+                </div>
                 <section className="jumbotron">
                     <div className="btn-group" role="group">
                         <Link type="button" className="btn btn-outline-primary" to={""} onClick={this.sortByMostRecent}>Most Recent</Link>
