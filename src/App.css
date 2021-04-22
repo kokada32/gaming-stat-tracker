@@ -2,7 +2,7 @@
 /* App  */
 #appTitle {
   color: white;
-  font-family: Stencil std, fantasy;
+  font-family: sans-serif;
   font-size: 70px;
 }
 
@@ -35,5 +35,98 @@
   color: white;
   border-color: white;
   font-size: 2rem;
-  font-family: Impact, fantasy;
+  font-family: Impact, sans-serif;
 }
+
+/* MatchForm */
+.matchlist-grid-container {
+  display: grid;
+}
+
+.grid-gameType {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  color: white;
+  font-size: 20px;
+  font-family: Verdana, sans-serif;
+}
+
+.grid-placement {
+  grid-column: 3;
+  grid-row: 1;
+  text-align: center;
+  color: rgb(248, 204, 81);
+  font-size: 30px;
+  font-family: Impact, sans-serif;
+}
+
+.grid-date {
+  grid-column: 1 / span 3;
+  grid-row: 2;
+  color: white;
+  font-size: 20px;
+  font-family: Verdana, sans-serif;
+}
+
+.grid-kills-label {
+  grid-column: 1 / span 1;
+  grid-row: 4;
+  color:dimgray;
+  font-size: 20px;
+  font-family: Verdana, sans-serif;
+}
+
+.grid-deaths-label {
+  grid-column: 2 / span 1;
+  grid-row: 4;
+  color:dimgray;
+  font-size: 20px;
+  font-family: Verdana, sans-serif;
+}
+
+.grid-damage-label {
+  grid-column: 3 / span 1;
+  grid-row: 4;
+  color:dimgray;
+  font-size: 20px;
+  font-family: Verdana, sans-serif;
+}
+
+.grid-kills {
+  grid-column: 1 / span 1;
+  grid-row: 5;
+  color:rgb(248, 204, 81);
+  font-size: 20px;
+  font-family: Impact, sans-serif;
+}
+
+.grid-deaths {
+  grid-column: 2 / span 1;
+  grid-row: 5;
+  color: aqua;
+  font-size: 20px;
+  font-family: Impact, sans-serif;
+}
+
+.grid-damage {
+  grid-column: 3 / span 1;
+  grid-row: 5;
+  color: aqua;
+  font-size: 20px;
+  font-family: Impact, sans-serif;
+}
+
+.grid-space {
+  grid-column: 1 / span 3;
+  grid-row: 3;
+  height: 15px;
+}
+
+.card {
+  margin: 5px;
+  background-color: black;
+}
+
+
+
+
