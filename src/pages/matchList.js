@@ -1,32 +1,20 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MatchRow from '../components/matchRow';
-import matches from '../matches.json';
+import matchesAPI from '../services/matchesAPI';
+// import matches from '../matches.json';
 
 class matchList extends Component {
     state = {
-        matches,
+        matches: [],
         filter: [],
     }
 
-    sortByMostRecent = () => {
-        // this.setState( prevState => {
-        //     const list = prevState.matches;
-        //     const sortByDate = list => {
-        //         const sorter = (a, b) => {
-        //             if(a.date > b.date) {
-        //                 return 1;
-        //             } else if (a.date < b.date) {
-        //                 return -1
-        //             } return 0
-        //         };
-        //         list.sort(sorter);
-        //         return list;
-        //     }
-        //     sortByDate(list);
-        //     console.log("sorted:", sortByDate(list))
-        //     this.FilterValues(list);
-        // })
+    async componentDidMount() {
+        matchesAPI.index()
+            .then ( matches => {
+                this.setState( {matches: matches.results} )
+            })
     }
 
     sortByMostKills = () => {
@@ -88,19 +76,39 @@ class matchList extends Component {
     //     }
     //  }
 
+        // sortByMostRecent = () => {
+        // this.setState( prevState => {
+        //     const list = prevState.matches;
+        //     const sortByDate = list => {
+        //         const sorter = (a, b) => {
+        //             if(a.date > b.date) {
+        //                 return 1;
+        //             } else if (a.date < b.date) {
+        //                 return -1
+        //             } return 0
+        //         };
+        //         list.sort(sorter);
+        //         return list;
+        //     }
+        //     sortByDate(list);
+        //     console.log("sorted:", sortByDate(list))
+        //     this.FilterValues(list);
+        // })
+    // }
+
     setFilter = type => {
         this.setState( () => {
-            const filter = matches.filter( s => s.gameType.includes(type));
+            const filter = this.state.matches.filter( s => s.gameType.includes(type));
             return {filter}
         });
     }
 
-    render() {
+    render () {
         let allMatchesRows;
         if ( this.state.filter.length > 1 ) {
             allMatchesRows = this.state.filter.map( f => <MatchRow key={f.matchId} {...f} />);
         } else {
-            allMatchesRows = matches.map( m => <MatchRow key={m.matchId} {...m} />);
+            allMatchesRows = this.state.matches.map( m => <MatchRow key={m.matchId} {...m} />);
         }
 
         return (
@@ -110,7 +118,7 @@ class matchList extends Component {
                 </div>
                 <section className="jumbotron">
                     <div className="btn-group" role="group">
-                        <Link type="button" className="btn btn-outline-primary" to={""} onClick={this.sortByMostRecent}>Most Recent</Link>
+                        {/* <Link type="button" className="btn btn-outline-primary" to={""} onClick={this.sortByMostRecent}>Most Recent</Link> */}
                         <Link type="button" className="btn btn-outline-primary" to={""} onClick={this.sortByMostKills}>Most Kills</Link>
                         <Link type="button" className="btn btn-outline-primary" to={""} onClick={this.sortByMostDamage}>Most Damage</Link>
                     </div>
