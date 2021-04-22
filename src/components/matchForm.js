@@ -25,7 +25,7 @@ const MatchForm = ({match, setMatch, buttonText, cancelPath}) => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} id="matchForm">
                 <div className="form-group">
                     <label>
                     <span>Game Type</span>
@@ -95,7 +95,7 @@ const MatchForm = ({match, setMatch, buttonText, cancelPath}) => {
                     </label>
                 </div>
                 <button className="btn btn-primary">{buttonText}</button>
-                <Link className="btn btn-link" to={cancelPath}>Cancel</Link>
+                <Link className="btn btn-link" to={cancelPath} id="cancelButton">Cancel</Link>
             </form>
         </div>
     );

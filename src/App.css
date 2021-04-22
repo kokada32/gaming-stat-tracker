@@ -6,6 +6,10 @@
   font-size: 70px;
 }
 
+main {
+  background-color:grey;
+}
+
 
 /* Navigation Bar */
 #navBar {
@@ -125,6 +129,36 @@
 .card {
   margin: 5px;
   background-color: black;
+}
+
+/* MatchForm */
+#matchForm {
+  text-align: center;
+}
+
+#matchForm label {
+  text-align: left;
+}
+
+#matchForm label span {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: white;
+}
+
+#matchForm .form-control {
+  font-size: 2rem;
+}
+
+#cancelButton {
+  color: white;
+  border-color: white;
+}
+
+/* MatchNew */
+#newMatchTitle {
+  text-align: center;
+  padding: 10px 10px;
 }
 
 

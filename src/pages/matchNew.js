@@ -4,9 +4,9 @@ import MatchForm from '../components/matchForm';
 const MatchNew = () => {
     const [match, setMatch] = useState({})
     return (
-        <div className="container">
+        <div className="container" id="newMatchContainer">
             <div className="row">
-                <h1>New Match</h1>
+                <h1 id="newMatchTitle">New Match</h1>
             </div>
             <div className="row">
                 <MatchForm
