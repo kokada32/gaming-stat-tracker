@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import MatchForm from '../components/matchForm';
-import MatchesAPI from '../services/matchesAPI';
 
 const MatchNew = () => {
     const [match, setMatch] = useState({})
@@ -13,7 +12,6 @@ const MatchNew = () => {
                 <MatchForm
                     match={match}
                     setMatch={setMatch}
-                    callApi={() => MatchesAPI.create(this.state.match) }
                     buttonText="Create Match"
                     cancelPath="/"
                 />

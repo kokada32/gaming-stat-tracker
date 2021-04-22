@@ -1,92 +1,92 @@
 [
     {
         "gameType": "Quads",
-        "kills": 5,
-        "deaths": 2,
-        "damage": 3493,
+        "kills": "5",
+        "deaths": "2",
+        "damage": "3493",
         "date": "April 12, 2021 5:34 PM",
         "placement": "2nd",
-        "matchId": 1
+        "matchId": "1"
     },
     {
         "gameType": "Solos",
-        "kills": 6,
-        "deaths": 2,
-        "damage": 4385,
+        "kills": "6",
+        "deaths": "2",
+        "damage": "4385",
         "date": "September 8, 2021 3:33 PM",
         "placement": "6th",
-        "matchId": 2
+        "matchId": "2"
     },
     {
         "gameType": "Quads",
-        "kills": 10,
-        "deaths": 5,
-        "damage": 5445,
+        "kills": "10",
+        "deaths": "5",
+        "damage": "5445",
         "date": "May 14, 2021 3:45 PM",
         "placement": "3rd",
-        "matchId": 3
+        "matchId": "3"
     },
     {
         "gameType": "Duos",
-        "kills": 3,
-        "deaths": 4,
-        "damage": 1555,
+        "kills": "3",
+        "deaths": "4",
+        "damage": "1555",
         "date": "October 23, 2021 12:12 PM",
         "placement": "16th",
-        "matchId": 4
+        "matchId": "4"
     },
     {
         "gameType": "Duos",
-        "kills": 9,
-        "deaths": 5,
-        "damage": 2457,
+        "kills": "9",
+        "deaths": "5",
+        "damage": "2457",
         "date": "October 31, 2021 1:01 PM",
         "placement": "4th",
-        "matchId": 5
+        "matchId": "5"
     },
     {
         "gameType": "Trios",
-        "kills": 7,
-        "deaths": 3,
-        "damage": 4003,
+        "kills": "7",
+        "deaths": "3",
+        "damage": "4003",
         "date": "April 29, 2021 4:21 PM",
         "placement": "1st",
-        "matchId": 6
+        "matchId": "6"
     },
     {
         "gameType": "Trios",
-        "kills": 7,
-        "deaths": 5,
-        "damage": 3562,
+        "kills": "7",
+        "deaths": "5",
+        "damage": "3562",
         "date": "April 11, 2021 3:44 PM",
         "placement": "8th",
-        "matchId": 7
+        "matchId": "7"
     },
     {
         "gameType": "Solos",
-        "kills": 15,
-        "deaths": 1,
-        "damage": 6784,
+        "kills": "15",
+        "deaths": "1",
+        "damage": "6784",
         "date": "January 10, 2021 1:11 PM",
         "placement": "1st",
-        "matchId": 8
+        "matchId": "8"
     },
     {
         "gameType": "Quads",
-        "kills": 2,
-        "deaths": 5,
-        "damage": 893,
+        "kills": "2",
+        "deaths": "5",
+        "damage": "893",
         "date": "February 10, 2021 5:55 PM",
         "placement": "23rd",
-        "matchId": 9
+        "matchId": "9"
     },
     {
         "gameType": "Quads",
-        "kills": 7,
-        "deaths": 3,
-        "damage": 4321,
+        "kills": "7",
+        "deaths": "3",
+        "damage": "4321",
         "date": "March 10, 2021 6:38 PM",
         "placement": "15th",
-        "matchId": 10
+        "matchId": "10"
     }
 ]

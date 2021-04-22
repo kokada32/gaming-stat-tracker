@@ -1,6 +1,10 @@
-import {Link} from 'react-router-dom';
+import { useState } from 'react'
+import {Link, Redirect} from 'react-router-dom';
+import MatchesAPI from '../services/matchesAPI';
 
-const matchForm = ({match, setMatch, buttonText, cancelPath, callApi}) => {
+const MatchForm = ({match, setMatch, buttonText, cancelPath}) => {
+
+    const [redirect, setRedirect] = useState({});
 
     const handleChange = e => {
         setMatch( prevMatch => ({
@@ -10,9 +14,15 @@ const matchForm = ({match, setMatch, buttonText, cancelPath, callApi}) => {
     }
 
     const handleSubmit = async e => {
-        // e.preventDefault();
-        // const data = await callApi();
+        e.preventDefault();
+        await MatchesAPI.create(match);
+        if (data) 
+            setRedirect( { pathname: `/matches/${data.objectId}`});
     }
+
+    if (redirect.pathname)
+        return <Redirect to={ redirect.pathname } />
+
     return (
         <div>
         <form onSubmit={handleSubmit}>
@@ -34,7 +44,6 @@ const matchForm = ({match, setMatch, buttonText, cancelPath, callApi}) => {
                 <input
                     className="form-control"
                     name="kills"
-                    type="number"
                     defaultValue={0}
                     placeholder="Number"
                     onChange={handleChange}
@@ -46,7 +55,6 @@ const matchForm = ({match, setMatch, buttonText, cancelPath, callApi}) => {
                 <span>Deaths</span>
                 <input
                     className="form-control"
-                    type="number"
                     name="deaths"
                     defaultValue={0}
                     onChange={handleChange}
@@ -59,7 +67,6 @@ const matchForm = ({match, setMatch, buttonText, cancelPath, callApi}) => {
                 <input
                     className="form-control"
                     name="damage"
-                    type="number"
                     defaultValue={0}
                     onChange={handleChange}
                 />
@@ -94,4 +101,4 @@ const matchForm = ({match, setMatch, buttonText, cancelPath, callApi}) => {
     );
 }
 
-export default matchForm;
+export default MatchForm;
