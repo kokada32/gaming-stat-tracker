@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import MatchForm from '../components/matchForm';
+import MatchesAPI from '../services/matchesAPI';
 
-const matchNew = () => {
+const MatchNew = () => {
+    const [match, setMatch] = useState({})
     return (
         <div className="container">
             <div className="row">
@@ -8,6 +11,9 @@ const matchNew = () => {
             </div>
             <div className="row">
                 <MatchForm
+                    match={match}
+                    setMatch={setMatch}
+                    callApi={() => MatchesAPI.create(this.state.match) }
                     buttonText="Create Match"
                     cancelPath="/"
                 />
@@ -15,4 +21,4 @@ const matchNew = () => {
         </div>
     );
 }
-export default matchNew;
+export default MatchNew;

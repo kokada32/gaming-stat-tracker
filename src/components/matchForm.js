@@ -1,9 +1,18 @@
 import {Link} from 'react-router-dom';
 
-const matchForm = ({buttonText, cancelPath}) => {
-    const handleChange = e => {}
+const matchForm = ({match, setMatch, buttonText, cancelPath, callApi}) => {
 
-    const handleSubmit = e => {}
+    const handleChange = e => {
+        setMatch( prevMatch => ({
+            ...prevMatch,
+            [e.target.name]: e.target.value
+        }));
+    }
+
+    const handleSubmit = async e => {
+        // e.preventDefault();
+        // const data = await callApi();
+    }
     return (
         <div>
         <form onSubmit={handleSubmit}>
@@ -14,8 +23,8 @@ const matchForm = ({buttonText, cancelPath}) => {
                     className="form-control"
                     name="gameType"
                     defaultValue={""}
-                    onChange={handleChange}
                     placeholder="Solos, Duos, Trios, Quads"
+                    onChange={handleChange}
                 />
                 </label>
             </div>
@@ -27,8 +36,8 @@ const matchForm = ({buttonText, cancelPath}) => {
                     name="kills"
                     type="number"
                     defaultValue={0}
-                    onChange={handleChange}
                     placeholder="Number"
+                    onChange={handleChange}
                 />
                 </label>
             </div>

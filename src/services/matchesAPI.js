@@ -14,8 +14,21 @@ const index = () => {
         .then( response => response.json());
 }
 
+const create = (match) => {
+    return fetch(baseUrl, {
+        headers: {
+            'Content-Type': 'application/json',
+            ...authHeaders
+        },
+        method: 'POST',
+        body: JSON.stringify(match)
+    })
+    .then( response => response.json());
+}
+
 const MatchesAPI = {
-    index
+    index,
+    create
 };
 
 export default MatchesAPI;
