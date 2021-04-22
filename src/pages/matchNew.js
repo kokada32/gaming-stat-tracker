@@ -1,6 +1,18 @@
+import MatchForm from '../components/matchForm';
+
 const matchNew = () => {
     return (
-        <div>This is the match New Page</div>
+        <div className="container">
+            <div className="row">
+                <h1>New Match</h1>
+            </div>
+            <div className="row">
+                <MatchForm
+                    buttonText="Create Match"
+                    cancelPath="/"
+                />
+            </div>
+        </div>
     );
 }
 export default matchNew;
